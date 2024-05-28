@@ -34,12 +34,8 @@ git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/luci-theme
 # find ./ | grep Makefile | grep mosdns | xargs rm -f
 # git clone https://github.com/firkerword/openwrt-mos.git package/openwrt-mos
 # git clone https://github.com/QiuSimons/openwrt-mos.git package/openwrt-mos
-# find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
-git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/openwrt-passwall
-git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall
-# git clone -b luci-smartdns-new-version https://github.com/xiaorouji/openwrt-passwall.git package/passwall
 # git clone https://github.com/firkerword/luci-app-mosdns.git package/mosdns
-# git clone https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
+# find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
 find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
 find ./ | grep Makefile | grep mosdns | xargs rm -f
 git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
@@ -47,3 +43,28 @@ git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 git clone https://github.com/firkerword/luci-app-serverchan.git package/luci-app-serverchan
 # git clone https://github.com/firkerword/luci-app-lucky.git package/lucky
 git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
+
+# iStore
+git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
+git_sparse_clone main https://github.com/linkease/istore luci
+
+# 添加额外插件
+git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
+git clone --depth=1 -b openwrt-18.06 https://github.com/tty228/luci-app-wechatpush package/luci-app-serverchan
+git clone --depth=1 https://github.com/ilxp/luci-app-ikoolproxy package/luci-app-ikoolproxy
+git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
+git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
+git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-app-netdata
+git_sparse_clone main https://github.com/Lienol/openwrt-package luci-app-filebrowser luci-app-ssr-mudb-server
+git_sparse_clone openwrt-18.06 https://github.com/immortalwrt/luci applications/luci-app-eqos
+# git_sparse_clone master https://github.com/syb999/openwrt-19.07.1 package/network/services/msd_lite
+
+# 科学上网插件
+git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app-ssr-plus
+git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
+git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/openwrt-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall
+# git clone -b luci-smartdns-new-version https://github.com/xiaorouji/openwrt-passwall.git package/passwall
+git clone https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
+
+
